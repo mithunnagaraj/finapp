@@ -1,19 +1,19 @@
-#Finapp
+# Finapp
 
-##Installtion
+## Installtion
 npm install
 
-##Run app
+## Run app
 npm start
 
-##Build
+## Build
 npm build
 
-#Build Prod
+## Build Prod
 npm build:prod
 
-##Run Unit Test
+## Run Unit Test
 npm test
 
-##Run e2e
+## Run e2e
 npm e2e
