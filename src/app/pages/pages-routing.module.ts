@@ -12,6 +12,8 @@ import { FollowupComponent } from "./followup/followup.component";
 import { EmiCalculatorComponent } from "./emi-calculator/emi-calculator.component";
 import { ReportsComponent } from "./reports/reports.component";
 import { AdminComponent } from "./admin/admin.component";
+import { BranchComponent } from './branch/branch.component';
+import { CompanyComponent } from './company/company.component';
 
 const routes: Routes = [
   {
@@ -53,6 +55,14 @@ const routes: Routes = [
       {
         path: "admin",
         component: AdminComponent,
+      },
+      {
+        path: "company",
+        component: CompanyComponent,
+      },
+      {
+        path: "branch",
+        component: BranchComponent,
       },
       {
         path: "layout",
@@ -114,8 +124,13 @@ const routes: Routes = [
       },
       {
         path: "",
-        redirectTo: "iot-dashboard",
+        redirectTo: "/auth/login",
         pathMatch: "full",
+      },
+      {
+        path: "/",
+        redirectTo: "/iot-dashboard",
+        pathMatch: "full"
       },
       {
         path: "**",

@@ -14,6 +14,8 @@ import { FollowupComponent } from './followup/followup.component';
 import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.component';
 import { ReportsComponent } from './reports/reports.component';
 import { AdminComponent } from './admin/admin.component';
+import { BranchComponent } from './branch/branch.component';
+import { CompanyModule } from './company/company.module';
 
 @NgModule({
   imports: [
@@ -23,6 +25,7 @@ import { AdminComponent } from './admin/admin.component';
     DashboardModule,
     ECommerceModule,
     MiscellaneousModule,
+    CompanyModule
   ],
   declarations: [
     PagesComponent,
@@ -33,6 +36,7 @@ import { AdminComponent } from './admin/admin.component';
     EmiCalculatorComponent,
     ReportsComponent,
     AdminComponent,
+    BranchComponent,
   ],
 })
 export class PagesModule {

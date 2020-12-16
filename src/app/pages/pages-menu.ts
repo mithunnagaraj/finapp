@@ -223,6 +223,22 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   }, */
   {
+    title: 'Administration',
+    icon: 'settings-2-outline',
+    // link: '/pages/admin',
+    // home: true,
+    children: [
+      { 
+      title: 'Company',
+      link: '/pages/company'
+      },
+      {
+        title: 'Branch',
+        link: '/pages/branch'
+        },
+    ]
+  },
+  {
     title: 'Dashboard',
     icon: 'eye-outline',
     link: '/pages/iot-dashboard',
@@ -262,12 +278,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Reports',
     icon: 'file-text-outline',
     link: '/pages/reports',
-    home: true,
-  },
-  {
-    title: 'Administration',
-    icon: 'settings-2-outline',
-    link: '/pages/admin',
     home: true,
   },
   {
