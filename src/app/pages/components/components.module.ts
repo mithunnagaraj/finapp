@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
   NbButtonModule,
   NbCardModule,
@@ -10,17 +11,12 @@ import {
   NbListModule,
   NbInputModule,
 } from '@nebular/theme';
-import { CommonModule } from '@angular/common';
-import { CompanyListComponent } from './company-list/company-list.component';
-import { CompanyComponent } from './company.component';
-import { CompanyDetailsComponent } from './company-details/company-details.component';
-import { ComponentsModule } from '../components/components.module';
+import { AddressComponent } from './address/address.component';
 import { FormsModule } from '@angular/forms';
 
 
-
 @NgModule({
-  declarations: [CompanyListComponent, CompanyComponent, CompanyDetailsComponent],
+  declarations: [AddressComponent],
   imports: [
     CommonModule,
     NbButtonModule,
@@ -32,8 +28,8 @@ import { FormsModule } from '@angular/forms';
   NbSelectModule,
   NbListModule,
   NbInputModule,
-  ComponentsModule,
   FormsModule
-  ]
+  ],
+  exports: [AddressComponent]
 })
-export class CompanyModule { }
+export class ComponentsModule { }

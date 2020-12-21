@@ -4,7 +4,7 @@ import { NbMenuModule } from '@nebular/theme';
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { ECommerceModule } from './e-commerce/e-commerce.module';
+// import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
@@ -16,6 +16,9 @@ import { ReportsComponent } from './reports/reports.component';
 import { AdminComponent } from './admin/admin.component';
 import { BranchComponent } from './branch/branch.component';
 import { CompanyModule } from './company/company.module';
+import { ComponentsModule } from './components/components.module';
+
+
 
 @NgModule({
   imports: [
@@ -23,9 +26,10 @@ import { CompanyModule } from './company/company.module';
     ThemeModule,
     NbMenuModule,
     DashboardModule,
-    ECommerceModule,
+    // ECommerceModule,
     MiscellaneousModule,
-    CompanyModule
+    CompanyModule,
+    ComponentsModule
   ],
   declarations: [
     PagesComponent,
