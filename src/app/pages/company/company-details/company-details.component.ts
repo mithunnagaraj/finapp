@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Optional } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NbDialogRef, NbDialogService } from '@nebular/theme';
 import { Address } from 'cluster';
 
 @Component({
@@ -6,16 +8,23 @@ import { Address } from 'cluster';
   templateUrl: './company-details.component.html',
   styleUrls: ['./company-details.component.scss']
 })
-export class CompanyDetailsComponent implements OnInit {
+export class CompanyDetailsComponent implements OnInit{
 
-  constructor() { }
+  @Input() title: string;
+
+  constructor() {}
+  ngOnInit(): void {
+    // this.dialogConfig.disableClose = false;
+  }
+  
 
   public fullName: String;
   public shortName: String;
   public ownerName: String;
   public address: Address;
 
-  ngOnInit(): void {
-  }
 
+  dismiss() {
+    // this.ref.close();
+  }
 }

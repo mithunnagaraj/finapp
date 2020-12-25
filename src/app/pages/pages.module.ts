@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbMenuModule } from '@nebular/theme';
+import { NbDialogModule, NbMenuModule } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -17,6 +17,7 @@ import { AdminComponent } from './admin/admin.component';
 import { BranchComponent } from './branch/branch.component';
 import { CompanyModule } from './company/company.module';
 import { ComponentsModule } from './components/components.module';
+import { CompanyDetailsComponent } from './company/company-details/company-details.component';
 
 
 
@@ -29,7 +30,8 @@ import { ComponentsModule } from './components/components.module';
     // ECommerceModule,
     MiscellaneousModule,
     CompanyModule,
-    ComponentsModule
+    ComponentsModule,
+    NbDialogModule.forChild(),
   ],
   declarations: [
     PagesComponent,

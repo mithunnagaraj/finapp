@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Address } from 'cluster';
+import { MatDialog } from '@angular/material/dialog';
+import { NbDialogService } from '@nebular/theme';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 @Component({
   selector: 'ngx-company',
@@ -8,9 +10,22 @@ import { Address } from 'cluster';
 })
 export class CompanyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogService: NbDialogService) { }
 
   ngOnInit(): void {
+  }
+
+  displayDetails(){
+    this.dialogService.open(CompanyDetailsComponent, {
+      context: {
+        title: 'Edit Company',
+      },
+      hasScroll:false,
+    });
+    //  const dialogRef = this.dialog.open(CompanyDetailsComponent);
+    //  dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Dialog result: ${result}`);
+    // });
   }
 
 }

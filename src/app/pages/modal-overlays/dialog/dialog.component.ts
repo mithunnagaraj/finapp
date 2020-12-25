@@ -19,6 +19,7 @@ export class DialogComponent {
       context: {
         title: 'This is a title passed to the dialog component',
       },
+      
     });
   }
 

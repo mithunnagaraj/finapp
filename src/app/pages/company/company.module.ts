@@ -9,6 +9,9 @@ import {
   NbSelectModule,
   NbListModule,
   NbInputModule,
+  NbDialogModule,
+  NbWindowModule,
+  NbDialogRef,
 } from '@nebular/theme';
 import { CommonModule } from '@angular/common';
 import { CompanyListComponent } from './company-list/company-list.component';
@@ -16,7 +19,7 @@ import { CompanyComponent } from './company.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { ComponentsModule } from '../components/components.module';
 import { FormsModule } from '@angular/forms';
-
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 
 @NgModule({
@@ -33,7 +36,12 @@ import { FormsModule } from '@angular/forms';
   NbListModule,
   NbInputModule,
   ComponentsModule,
-  FormsModule
-  ]
+  FormsModule,
+  Ng2SmartTableModule,
+  NbDialogModule.forChild(),
+  NbWindowModule.forChild(),
+  ],
+  entryComponents: [CompanyDetailsComponent]
+
 })
 export class CompanyModule { }
