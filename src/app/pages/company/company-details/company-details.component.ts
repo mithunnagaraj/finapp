@@ -1,7 +1,7 @@
 import { Optional } from '@angular/core';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NbDialogRef, NbDialogService } from '@nebular/theme';
-import { Address } from 'cluster';
+import { AddressComponent } from 'app/pages/components/address/address.component';
 
 @Component({
   selector: 'company-details',
@@ -11,20 +11,35 @@ import { Address } from 'cluster';
 export class CompanyDetailsComponent implements OnInit{
 
   @Input() title: string;
+  @ViewChild(AddressComponent) address;
 
-  constructor() {}
+  operation: String;
+
+  constructor(protected ref: NbDialogRef<CompanyDetailsComponent>) {}
   ngOnInit(): void {
-    // this.dialogConfig.disableClose = false;
+    this.operation = "Add";
   }
-  
+
+  public model = {
+    fullName: "",
+    shortName: "",
+    ownerName: ""
+  };
 
   public fullName: String;
   public shortName: String;
   public ownerName: String;
-  public address: Address;
-
 
   dismiss() {
-    // this.ref.close();
+    this.ref.close();
+  }
+
+  addCompany() {
+    this.model['address'] = this.address.model;
+    alert("Data : " + this.model)
+  }
+
+  editCompany() {
+
   }
 }

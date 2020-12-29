@@ -6,23 +6,23 @@
     <div class="col-12 col-sm-12 col-md-9 p-0">
         <div class="row m-3">
             <div class="col-12 p-0">
-                <input type="text" nbInput placeholder="Address Line 1">
+                <input type="text" nbInput placeholder="Address Line 1" [(ngModel)]="model.address1">
             </div>
         </div>
         <div class="row m-3">
             <div class="col-12 p-0">
-                <input type="text" nbInput placeholder="Address Line 2">
+                <input type="text" nbInput placeholder="Address Line 2" [(ngModel)]="model.address2">
             </div>
         </div>
         <div class="row m-3">
             <div class="col-12 col-md-4 p-0">
-                <nb-select placeholder="Select Country" [(selected)]="selectedCountry" fullWidth="true">
+                <nb-select placeholder="Select Country" [(selected)]="selectedCountry" [(ngModel)]="model.country" fullWidth="true">
                     <nb-option value="0">India</nb-option>
                     <nb-option value="1">Canada</nb-option>
                   </nb-select>
             </div>
             <div class="col-12 col-md-4 mx-3">
-                <nb-select placeholder="Select State" [(selected)]="selectedState" fullWidth="true">
+                <nb-select placeholder="Select State" [(selected)]="selectedState" [(ngModel)]="model.state" fullWidth="true">
                     <nb-option value="0">Andhra</nb-option>
                     <nb-option value="1">Karnataka</nb-option>
                     <nb-option value="2">Tamilnadu</nb-option>
@@ -31,14 +31,14 @@
         </div>
         <div class="row m-3">
             <div class="col-12 col-md-4 p-0">
-                <nb-select placeholder="Select District" [(selected)]="selectedDistrict" fullWidth="true">
+                <nb-select placeholder="Select District" [(selected)]="selectedDistrict" [(ngModel)]="model.district" fullWidth="true">
                     <nb-option value="0">Hyderabad</nb-option>
                     <nb-option value="1">Vijayawada</nb-option>
                     <nb-option value="2">Vizag</nb-option>
                   </nb-select>
             </div>
             <div class="col-12 col-md-4 mx-3">
-                <nb-select placeholder="Select City" [(selected)]="selectedCity" fullWidth="true">
+                <nb-select placeholder="Select City" [(selected)]="selectedCity" [(ngModel)]="model.city" fullWidth="true">
                     <nb-option value="0">Bangalore</nb-option>
                     <nb-option value="1">Hyderabad</nb-option>
                     <nb-option value="2">Chennai</nb-option>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="row m-3">
-            <input type="text" nbInput placeholder="Pincode" [(ngModel)]="pincode">
+            <input type="text" nbInput placeholder="Pincode" [(ngModel)]="model.pincode">
         </div>
     </div>
 </div>

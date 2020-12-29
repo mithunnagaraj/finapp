@@ -15,10 +15,10 @@ export class CompanyComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  displayDetails(){
+  displayDetails(operation){
     this.dialogService.open(CompanyDetailsComponent, {
       context: {
-        title: 'Edit Company',
+        title: operation + ' Company',
       },
       hasScroll:false,
     });

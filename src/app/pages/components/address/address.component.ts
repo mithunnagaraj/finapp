@@ -1,27 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'address',
-  templateUrl: './address.component.html',
-  styleUrls: ['./address.component.scss']
+  selector: "address",
+  templateUrl: "./address.component.html",
+  styleUrls: ["./address.component.scss"],
 })
 export class AddressComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  public model = {
+    country: "0",
+    state: "1",
+    city: "1",
+    district: "1",
+    pincode: "",
+    address1: "",
+    address2: ""
+  };
 
   public selectedCountry: String;
   public selectedState: String;
   public selectedCity: String;
   public selectedDistrict: String;
-    public pincode: String;
+  public pincode: String;
 
   ngOnInit(): void {
-    this.selectedCountry = '0';
-  this.selectedState = "1";
-  this.selectedCity = "1";
-  this.selectedDistrict = "1";
+    // this.model = {
+    //   country: "0",
+    //   state: "1",
+    //   city: "1",
+    //   district: "1",
+    //   pincode: ""
+    // };
   }
-
-  
-
 }

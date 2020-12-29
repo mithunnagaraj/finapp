@@ -1,6 +1,11 @@
 <div class="row">
-    <div class="col-12">
-        <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
-        </ng2-smart-table>
-    </div>
+  <div class="col-12" class="company-list-table">
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="source"
+      (deleteConfirm)="onDeleteConfirm($event)"
+      (userRowSelect)="rowSelected($event)"
+    >
+    </ng2-smart-table>
+  </div>
 </div>

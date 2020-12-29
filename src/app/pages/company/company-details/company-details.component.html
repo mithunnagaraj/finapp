@@ -12,7 +12,7 @@
             type="text"
             nbInput
             placeholder="Full Name"
-            [(ngModel)]="fullName"
+            [(ngModel)]="model.fullName"
           />
         </div>
       </div>
@@ -25,7 +25,7 @@
             type="text"
             nbInput
             placeholder="Short Name"
-            [(ngModel)]="shortName"
+            [(ngModel)]="model.shortName"
           />
         </div>
       </div>
@@ -38,7 +38,7 @@
             type="text"
             nbInput
             placeholder="Owner Name"
-            [(ngModel)]="ownerName"
+            [(ngModel)]="model.ownerName"
           />
         </div>
       </div>
@@ -47,9 +47,15 @@
       </div>
     </div>
   </nb-card-body>
-  <nb-card-footer>
-    <button nbButton hero status="primary" (click)="dismiss()">
-      Dismiss Dialog
+  <nb-card-footer class="d-flex justify-content-end">
+    <button nbButton *ngIf="operation == 'Add'" status="basic" (click)="addCompany()" class="mx-3">
+        Add Company
+      </button>
+      <button nbButton *ngIf="operation == 'Edit'" status="basic" (click)="editCompany()" class="mx-3">
+        Edit Company
+      </button>
+    <button nbButton status="basic" (click)="dismiss()" class="mx-3">
+      Cancel
     </button>
   </nb-card-footer>
 </nb-card>
